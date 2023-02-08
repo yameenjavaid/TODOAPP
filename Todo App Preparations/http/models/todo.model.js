@@ -22,5 +22,11 @@ const Todo = sequelize.define('Todos', {
   timestamps: false
 });
 
+// sequelize.sync({ force: true }).then(() => {
+//   console.log('Tables created or updated');
+// });
+
 
 module.exports = Todo;
+
+

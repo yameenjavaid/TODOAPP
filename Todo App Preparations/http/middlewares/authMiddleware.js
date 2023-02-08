@@ -1,10 +1,8 @@
-const authMiddleware = async (req, res, next) => {
-    const { username, password } = req.body;
-    if (username === 'user' && password === 'pass') {
-        next();
-    } else {
-        res.status(401).send({ error: 'Invalid username or password' });
-    }
-};
+const authMiddleware = (req, res, next) => {
+    console.log("Came Here");
+    if (!req.session.user) 
+        return res.status(401).send('Not authorized');
+    next();
+}; 
 
 module.exports = authMiddleware;
