@@ -1,5 +1,5 @@
 const express = require('express');
-const uuid = require('uuid/v4');
+const uuid = require('uuid');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -29,11 +29,12 @@ app.post('/todos', authMiddleware, async (req, res) => {
 });
 
 app.get('/todos', authMiddleware, async (req, res) => {
-  try {
-    res.status(200).send(todoItems);
-  } catch (error) {
-    res.status(500).send({ error });
-  }
+  console.log(req.params);
+  // try {
+  //   res.status(200).send(todoItems);
+  // } catch (error) {
+  //   res.status(500).send({ error });
+  // }
 });
 
 app.get('/todos/:id', authMiddleware, async (req, res) => {
@@ -78,4 +79,6 @@ app.delete('/todos/:id', authMiddleware, async (req, res) => {
     }
   } catch (error) {
     res.status(500).send({ error });
-  }});git flow feature start feature_branch
+  }});
+
+app.listen(4000);

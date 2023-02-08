@@ -1,0 +1,18 @@
+{
+  "name": "layered-approach",
+  "version": "1.0.0",
+  "description": "src    ├──server.js    ├──.env           dotenv configuration    ├──app          ├── index.js                   app entry point          ├── /api-docs                  api documnentation (swagger/openApi)          ├── /api-routes                api routes                   ├── /config                    config settings, env variables                ├──config.js             convict configuration                ├──development.json      development configuration values                   ├── /controllers               controller layer          ├── /loaders                   loaders for startup modules          ├── /services                  service layer: business logic          ├── /models                    data access layer: database models          ├── /scripts                   miscellaneous NPM scripts          ├── /subscribers               async event handlers          └── /test                      test suites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.1.1",
+    "sequelize": "^6.28.0"
+  }
+}
