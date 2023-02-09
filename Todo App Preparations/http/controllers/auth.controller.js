@@ -17,6 +17,8 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
     const { username, password } = req.body;
+    
+    console.log(username,password);
     try 
     {
         const user = await User.findOne({ username });
@@ -33,7 +35,15 @@ const login = async (req, res) => {
   }
 };
 
+const logout = async (req, res) => {
+    req.session.destroy((err) => {
+        if (err) return res.status(500).send(err);
+        res.send('You have been logged out');
+      });
+};
+
 module.exports = {
-  register,
-  login,
+    register,
+    login,
+    logout
 };
