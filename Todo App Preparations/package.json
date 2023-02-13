@@ -2,9 +2,10 @@
   "name": "nodejs-express-sequelize-mysql",
   "version": "1.0.0",
   "description": "Node.js Rest Apis with Express, Sequelize & MySQL",
-  "main": "server.js",
+  "main": "http/express_app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon http/express_app.js"
   },
   "keywords": [
     "nodejs",
@@ -17,10 +18,19 @@
   "author": "bezkoder",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.3.2",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.28.0"
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2",
+    "sequelize": "^6.28.0",
+    "uuid": "^9.0.0"
   }
 }
